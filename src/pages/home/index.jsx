@@ -27,10 +27,11 @@ export const HomePage = () => {
 		setBusy(true);
 		try {
 			let otp = '';
-			otp += values.otp1.toString();
-			otp += values.otp2.toString();
-			otp += values.otp3.toString();
-			otp += values.otp4.toString();
+			otp +=
+				values.otp1.toString() +
+				values.otp2.toString() +
+				values.otp3.toString() +
+				values.otp4.toString();
 			const res = await userService.verifyOtp(email, otp);
 			api.success({
 				message: 'Email Verification!',
