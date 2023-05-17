@@ -1,0 +1,71 @@
+.joyride {
+  background-color: yellow;
+}
+.priceParentRow {
+  border-radius: 10px;
+  padding: 10px;
+  width: 100%;
+  margin: 0px !important;
+}
+.priceChildRow {
+  border-radius: 10px;
+  padding-top: 14px;
+}
+.tourTitle {
+  text-align: center;
+  padding-top: 5px;
+}
+.PricesCalculate {
+  display: flex;
+  justify-content: space-between;
+}
+.priceDiv {
+  padding-top: 8px;
+  background: linear-gradient(145deg, #000000, #242424);
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+}
+.priceTag {
+  color: White;
+  font-size: 16px;
+  font-weight: 600;
+  padding: 0px 10px 5px 10px;
+  text-align: start;
+  margin: 0px !important;
+}
+
+.priceSubTag {
+  color: White;
+  font-size: 13px;
+  font-weight: 400;
+  padding: 0px 10px;
+  text-align: start;
+  margin-bottom: 13px;
+}
+.priceTagDiv {
+  padding-top: 10px;
+  border-left: 5px solid transparent;
+}
+.priceTagDiv:focus,
+.priceTagDiv:active,
+.priceTagDiv:hover {
+  cursor: pointer;
+  font-family: 600;
+  color: #c9c9c9 !important;
+  border-left: 5px solid #4a5055;
+}
+.priceTagDivActive {
+  cursor: pointer;
+  font-family: 600;
+  color: #c9c9c9 !important;
+  border-left: 5px solid #4a5055;
+}
+.underline {
+  background: #4a5055;
+  height: 1px;
+  width: 100%;
+  margin: '2px 0px';
+}
