@@ -19,6 +19,11 @@ export const HomePage = () => {
 				placement: 'topRight',
 			});
 		} catch (err) {
+			api.error({
+				message: 'Error!',
+				description: err.message,
+				placement: 'topRight',
+			});
 			console.log('error:', err);
 		}
 		setBusy(false);
@@ -41,7 +46,7 @@ export const HomePage = () => {
 			setVerify(false);
 		} catch (err) {
 			api.error({
-				message: 'Email Verification!',
+				message: 'Error!',
 				description: err.message,
 				placement: 'topRight',
 			});

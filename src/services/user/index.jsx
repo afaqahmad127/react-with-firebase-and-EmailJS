@@ -13,7 +13,8 @@ export const userService = {
 	loginOrSignUp: async ({ email, password }) => {
 		const otp = userService.generateUniqueOTP();
 		await userService.sendEmail(email, otp);
-		if (!(await userService.checkUserExistOrGet(email))) {
+		const userData = await userService.checkUserExistOrGet(email);
+		if (!userData) {
 			await setDoc(doc(usersRef, email), {
 				email,
 				password,
@@ -21,7 +22,11 @@ export const userService = {
 				isOtpUsed: false,
 			});
 		} else {
-			await userService.updateData(email, { otp: otp, isOtpUsed: false });
+			if (userData.email === email && userData.password === password) {
+				await userService.updateData(email, { otp: otp, isOtpUsed: false });
+			} else {
+				throw new Error(errorMessage.invalidCredential);
+			}
 		}
 	},
 	sendEmail: async (to, otp) => {
